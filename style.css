@@ -1,0 +1,238 @@
+/* =============== GERAL =======================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-primary: hsl(0, 0%, 94%);
+  --bg-secundary: hsl(228, 15%, 38%);
+  --bg-button: hsl(348, 100%, 66%);
+  --bg-button-hover: hsl(348, 98%, 61%);
+  --line: hsl(240, 24%, 92%);
+  --label: hsl(258, 9%, 32%);
+  --span: hsl(255, 5%, 48%);
+  --input: hsl(240, 25%, 98%);
+  --bd-input: hsl(240, 25%, 92%);
+}
+
+body {
+  font-size: 1.6rem;
+
+  background: var(--bg-primary);
+}
+
+body::before {
+  content: '';
+  width: 100%;
+  height: 43.6rem;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: var(--bg-secundary);
+}
+
+header,
+legend,
+h2,
+footer .button {
+  font-family: 'Staatliches', cursive;
+}
+
+body,
+p,
+input {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* =============== BODY =======================*/
+.page {
+  width: 75rem;
+  margin: auto;
+}
+
+header {
+  width: 41.7rem;
+  margin-top: 14rem;
+}
+
+header h1 {
+  font-weight: 400;
+  font-size: 4.8rem;
+  line-height: 6rem;
+  color: white;
+
+  margin-bottom: 1.8rem;
+}
+
+header p {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: white;
+}
+
+form {
+  margin-top: 5.8rem;
+  background: white;
+  border-radius: 20px 20px 0px 0px;
+  min-height: 30rem;
+
+  padding: 6.4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+fieldset {
+  border: none;
+}
+
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.fieldset-wrapper .beside .input-wrapper {
+  width: 30rem;
+}
+
+fieldset legend {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+  color: var(--bg-secundary);
+
+  width: 100%;
+
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.beside {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-wrapper label {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+
+  color: var(--label);
+
+  margin-bottom: 8px;
+}
+
+.input-wrapper label span {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: var(--span);
+
+  margin-left: 8px;
+}
+
+.input-wrapper label span:hover {
+  color: var(--label);
+}
+
+.input-wrapper input {
+  background-color: var(--input);
+
+  border: 1px solid var(--bd-input);
+  border-radius: 8px;
+  height: 5.6rem;
+
+  padding: 0 2.4rem;
+
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: var(--label);
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.4rem;
+
+  color: var(--bg-secundary);
+
+  /* remember margin top 3.2rem*/
+}
+.col-a {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.col-a > div:nth-child(1) {
+  width: 100%;
+  margin-right: 2.2rem;
+}
+
+.col-a:first-child {
+  width: 30rem;
+}
+
+.col-a .first {
+  margin-top: 1.6rem;
+  /* margin top add 1.6rem because already have a gap of 1.6rem from .fieldset-wrapper */
+}
+
+.col-b {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.col-b > div:nth-child(1) {
+  width: 100%;
+  margin-right: 2.2rem;
+}
+
+footer {
+  background: var(--bg-secundary);
+
+  height: 16rem;
+  display: flex;
+  flex-direction: column;
+
+  padding: 5.2rem 7.1rem;
+
+  border-radius: 0px 0px 20px 20px;
+  margin-bottom: 36.6rem;
+}
+
+footer .button {
+  height: 5.5rem;
+  background: var(--bg-button);
+  border-radius: 2rem;
+  border: none;
+
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.6rem;
+
+  color: white;
+}
+
+footer .button:hover {
+  background: var(--bg-button-hover);
+}
+
+/* =============== VALIDATIONS =======================*/
+
+input:invalid {
+  border: 1px solid red;
+}
