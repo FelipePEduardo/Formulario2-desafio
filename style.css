@@ -23,6 +23,7 @@ body {
   font-size: 1.6rem;
 
   background: var(--bg-primary);
+  min-width: 40rem;
 }
 
 body::before {
